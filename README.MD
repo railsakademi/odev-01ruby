@@ -52,7 +52,7 @@ address_book.search_person("Jean")
 ## Başlangıç
 
 1. Bu repo'yu kendi GitHub hesabınıza forklayın.
-2. Git clone ile projeyi bilgisayarına kopyalayın.
+2. ```git clone``` ile projeyi bilgisayarına kopyalayın.
 3. Proje klasörü içerisinde ```bundle install``` komutunu çalıştırın.
 4. ```ruby test.rb``` komutu ile testleri çalışıp sonuçları görüntüleyebilirsiniz. ```watch ruby test.rb``` diyerek testlerin belirli aralıklarla otomatik olarak çalışmasını sağlayabilirsiniz.
 5. Ödevi teslim etmek için bu repoya pull-request gönderin. [4][5]
