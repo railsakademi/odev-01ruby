@@ -49,7 +49,18 @@ address_book.search_person("Jean")
 
 ```
 
+## Başlangıç
+
+1. Bu repo'yu kendi GitHub hesabınıza forklayın.
+2. Git clone ile projeyi bilgisayarına kopyalayın.
+3. Proje klasörü içerisinde ```bundle install``` komutunu çalıştırın.
+4. ```ruby test.rb``` komutu ile testleri çalışıp sonuçları görüntüleyebilirsiniz. ```watch ruby test.rb``` diyerek testlerin belirli aralıklarla otomatik olarak çalışmasını sağlayabilirsiniz.
+5. Ödevi teslim etmek için bu repoya pull-request gönderin. [4][5]
+
 ## Linkler
 
 1. http://ruby-doc.org/core-2.2.0/File.html
 2. http://ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html
+3. https://fatihbaydar.wordpress.com/test-cesitleri/unit-test-nedir/
+4. https://medium.com/@noteCe/github-ile-fork-ve-pull-request-be6077342834
+5. https://help.github.com/articles/using-pull-requests/
