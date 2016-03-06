@@ -43,9 +43,9 @@ address_book.print_people
 # 4,Michael Hicks,55-(764)274-2198,Picos
 # ..
 
-address_book.search_person("Michael")
+address_book.search_person("Jean")
 
-# 4,Michael Hicks,55-(764)274-2198,Picos
+# 3,Jean Richardson,351-(187)631-6728,Casais Brancos
 
 ```
 
