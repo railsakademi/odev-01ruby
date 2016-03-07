@@ -8,8 +8,8 @@ class AddressBook
     @peoples = {}
     csv = CSV.read(csv_path)
     csv.shift
-    csv.each do |csvRow|
-        @peoples[csvRow[0]] = Person.new(csvRow[0], csvRow[1], csvRow[2], csvRow[3])
+    csv.each do |csv_row|
+        @peoples[csv_row[0]] = Person.new(csv_row[0], csv_row[1], csv_row[2], csv_row[3])
     end
   end
 
