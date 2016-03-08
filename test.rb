@@ -20,8 +20,8 @@ class TestAddressBook < Minitest::Test
 
   def test_search_people
     out, err = capture_subprocess_io do
-      @address_book.search_person("Jean")
+      @address_book.search_person("Victor")
     end
-    assert_match /3,Jean Richardson,351-\(187\)631-6728,Casais Brancos/, out
+    assert_match /7,Victor Tomaili,81-\(982\)986-3110,Nakama/, out
   end
 end
