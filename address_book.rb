@@ -21,9 +21,7 @@ class AddressBook
 
   def search_person(person_name)
     @peoples.each do |key, person|
-        if person.full_name.include? person_name
-            puts "#{person.id},#{person.full_name},#{person.phone_number},#{person.city}"
-        end
+        puts "#{person.id},#{person.full_name},#{person.phone_number},#{person.city}" if person.full_name.include? person_name
     end
   end
 end
