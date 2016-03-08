@@ -17,7 +17,7 @@ class TestAddressBook < Minitest::Test
     assert_match /16\,Bonnie Adams\,54-\(568\)416-0730\,Las Varillas/, out
     assert_match /6\,Clarence Dunn\,46-\(639\)894-1792\,Kista/, out
   end
-
+  
   def test_search_people
     out, err = capture_subprocess_io do
       @address_book.search_person("Jean")
