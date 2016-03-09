@@ -14,6 +14,4 @@ class Person
 	def to_s()
 		[@id, @full_name, @phone_number, @city].join(',')
 	end
-
-
 end
