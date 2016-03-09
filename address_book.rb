@@ -6,7 +6,7 @@ class AddressBook
   def initialize(csv_path)
     @people = []
   	CSV.read(csv_path)[1..-1].each do |p|
-      @people.push(Person.new(p[0],p[1],p[2],p[3]))
+      @people.push(Person.new(p[0], p[1], p[2], p[3]))
     end
   end
 
