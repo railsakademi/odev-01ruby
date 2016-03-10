@@ -1,8 +1,10 @@
+require 'csv'
+
 class AddressBook
 
   def initialize(csv_path)
     @people = []
-    populatePeopleArray(csv_path)
+    populate_people_array(csv_path)
   end
 
   def print_people
@@ -26,8 +28,16 @@ class AddressBook
     end
   end
 
-  private 
-    def populatePeopleArray(csv_path)
+  private
+    def populate_people_array(csv_path)
+      CSV.foreach(csv_path) do |row|
+        @people << Person.new(row[0], row[1], row[2], row[3])
+      end
+
+      @people.shift # removo the header
+    end
+
+    def populate_people_array_ex(csv_path)
       fh = open(csv_path)
       fh.readline # read the header
       while (line = fh.gets) != nil
