@@ -1,26 +1,23 @@
+require "./person.rb"
+require 'csv'
 class AddressBook
-  def initialize(csv_path)
-    require 'csv'
-    @@book = CSV.read(csv_path)
-  end
-
-  def print_people
-    puts "Kisi listesi"
-    puts "-------------"
-   @@book.each do |people| 
-     puts people[0]+" "+people[1]+" "+people[2]+" "+people[3]
-   end
-   puts "--------------"
- end
-
-  def search_person(person_name)
-    puts "Aranilan kisi: " + person_name
-    found_people = "Kisi bulunamadi."
-    @@book.each do |people|
-      if people[1].include?person_name
-        found_people = people
-      end
+    attr_accessor :people 
+    def initialize(csv_path)
+        @book = []
+        CSV.foreach(csv_path) do |row|
+            @book << Person.new(row[0],row[1],row[2],row[3])
+        end
     end
-    puts found_people
-  end
+    def print_people
+        @book.each do |person|
+            puts "# #{person.id},#{person.full_name},#{person.phone_number},#{person.city}"
+        end
+    end
+    def search_person(person_name)
+        @book.each do |person|
+            if person.full_name.include? person_name
+                puts "#{person.id},#{person.full_name},#{person.phone_number},#{person.city}" 
+            end
+        end
+    end
 end
